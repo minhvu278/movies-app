@@ -7,6 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Movies</title>
     <link rel="stylesheet" href="{{ asset('css/app.css') }}">
+    <livewire:styles />
 </head>
 <body class="font-sans bg-gray-900 text-white">
 <nav class="border-b border-gray-800">
@@ -31,13 +32,12 @@
                 <a href="#" class="hover:text-gray-300">Actors</a>
             </li>
         </ul>
-        <div class="flex items-center">
-            <div class="relative">
-                <input type="text" class="bg-gray-800 rounded-full w-64 px-4 py-1 focus:outline-none focus:shadow-outline" placeholder="Search">
-            </div>
+        <div class="flex flex-col md:flex-row items-center">
+            <livewire:search-dropdown />
         </div>
     </div>
 </nav>
 @yield('content')
+<livewire:scripts />
 </body>
 </html>
